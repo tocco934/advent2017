@@ -1,14 +1,10 @@
 {
-  "name": "orca",
+  "name": "AdventOfCode2017",
   "version": "1.0.0",
-  "description": "ORCA - Optimized Routing by Cost and Availability",
-  "author": "Lynx Squad",
+  "description": "Code for the advent of code 2017 challenge",
+  "author": "dtocco",
   "private": true,
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.26.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-stage-2": "^6.24.1",
     "eslint": "^3.14.0",
     "eslint-config-airbnb-base": "^11.1.2",
     "eslint-plugin-import": "^2.2.0",
