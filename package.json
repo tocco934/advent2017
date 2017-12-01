@@ -1,0 +1,25 @@
+{
+  "name": "orca",
+  "version": "1.0.0",
+  "description": "ORCA - Optimized Routing by Cost and Availability",
+  "author": "Lynx Squad",
+  "private": true,
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^3.14.0",
+    "eslint-config-airbnb-base": "^11.1.2",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jest": "^21.2.0",
+    "eslint-plugin-promise": "^3.4.1",
+    "jest": "^21.2.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "scripts": {
+    "jest": "jest"
+  }
+}
