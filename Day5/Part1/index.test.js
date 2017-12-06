@@ -5,7 +5,7 @@ test('Returns 5 when given the example instructions', () => {
   expect(calculateSteps(input)).toBe(5);
 });
 
-test('Returns x when given the problem input', () => {
+test('Returns 351282 when given the problem input', () => {
   const input = [2, 0, 0, 1, 2, 0, 1, -4, -5, 0, -1, 0, -6, 0, -5, 2, -9, -11,
     -15, -3, -11, -12, -14, -5, -16, -3, -13, -6, 0, -3, -17, 0, -17, -5, -1,
     -26, -21, -14, -20, -7, -24, -26, -32, -41, -2, -18, -18, -13, -28, 0, -32,
@@ -73,7 +73,5 @@ test('Returns x when given the problem input', () => {
     -321, -801, -881, -220, -388, -116, -962, -1007, -862, -20, -409, -116, -943,
     -558, -1001, -548, -302, -165, -730, -1012, -669, -875, -393, -979];
 
-  const steps = calculateSteps(input);
-  console.log('steps', steps);
-  // expect(calculateSteps(input)).toBe();
+  expect(calculateSteps(input)).toBe(351282);
 });
