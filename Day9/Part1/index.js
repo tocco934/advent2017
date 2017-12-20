@@ -1,21 +1,50 @@
 const _ = require('lodash');
 
-const getGroups = (input) => {
-  let matches = 0;
+const scoreGroups = (input) => {
+  let score = 0;
+  let level = 0;
+  _.forEach(input, (char) => {
+    if (char === '{') {
+      level += 1;
+    } else if (char === '}') {
+      score += level;
+      level -= 1;
+    }
+  });
+  return score;
+};
 
-  const re = /{*}/g;
-  let m = re.exec(input);
+const removeUselessCharacters = (input) => {
+  let garbage = false;
+  let ignoreNext = false;
 
-  while (m) {
-    matches += 1;
-    m = re.exec(input);
-  }
-  return matches;
+  const cleanedString = _.map(input, (char) => {
+    if (ignoreNext) {
+      ignoreNext = false;
+      return '';
+    } else if (char === '!') {
+      ignoreNext = true;
+      return '';
+    } else if (char === '<') {
+      garbage = true;
+      return '';
+    } else if (char === '>') {
+      garbage = false;
+      return '';
+    } else if (garbage) {
+      return '';
+    } else if (char === ',') {
+      return '';
+    }
+    return char;
+  });
+
+  return _.join(cleanedString, '');
 };
 
 const streamScorer = (input) => {
-  const formattedString = _.replace(input, /<.*>/g, '');
-  return getGroups(formattedString);
+  const formattedString = removeUselessCharacters(input);
+  return scoreGroups(formattedString);
 };
 
 module.exports = {
